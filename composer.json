@@ -1,0 +1,25 @@
+{
+  "name": "chella/aws-services",
+  "description": "amazon service tnq",
+  "version": "v0.0.1",
+  "type": "library",
+  "require": {
+    "aws/aws-sdk-php": "^3.87"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chella S",
+      "email": "2chellaa@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Chella\\AwsService\\": "app/Aws"
+    }
+  },
+  "config": {
+    "secure-http": false
+  }
+}
