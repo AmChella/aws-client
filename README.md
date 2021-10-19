@@ -75,6 +75,10 @@ catch (Exception $e) {
 
 https://registry.hub.docker.com/r/minio/minio/
 
+### docker run command
+
+docker run -e MINIO_ROOT_USER=admin -e MINIO_ROOT_PASSWORD=chella#321 -p 9000:9000 -p 9001:9001 --name cloudS3local minio/minio server /data --console-address ":9001"
+
 #### Here you go
 
 Happy coding.
