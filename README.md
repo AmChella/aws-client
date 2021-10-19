@@ -40,7 +40,7 @@ catch (Exception $e) {
 ```use Tnq\AwsService\App;
 
 try {
-    $s3 = App::get("minioFileSystem", [
+    $minio = App::get("minioFileSystem", [
         'version' => 'latest',
         'region'  => 'us-east-1',
         'endpoint' => 'http://localhost:9000',
@@ -51,6 +51,19 @@ try {
         ],
         'bucket' => '###',
     ]);
+
+    ## for writing content over minio server
+    ## 1st arg is filename
+    ## 2nd arg is content
+    $minio->write('sample.txt', 'hello minio test');
+
+    ## for read content over minio server
+    ## 1st arg is filename
+    echo $minio->read('sample.txt');
+
+    ## for delete content over minio server
+    ## 1st arg is filename
+    echo $minio->delete('sample.txt');
 }
 catch (Exception $e) {
     echo $e->getMessage() . "\n";
