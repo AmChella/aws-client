@@ -71,6 +71,10 @@ catch (Exception $e) {
 
 ```
 
+### Minio docker documentation
+
+https://registry.hub.docker.com/r/minio/minio/
+
 #### Here you go
 
 Happy coding.
