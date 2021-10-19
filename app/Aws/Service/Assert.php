@@ -58,8 +58,7 @@ class Assert {
     }
 
     public static function isEmpty($data, $message) {
-        self::isString($data, $message);
-        if (strlen($data) > 0) {
+        if (empty($data) === true) {
             throw new AssertionException($message);
         }
     }

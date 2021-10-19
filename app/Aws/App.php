@@ -42,6 +42,14 @@ Class App {
             return new S3FileSystem($aws, $config['bucket']);
         };
 
+        $app['minioFileSystem'] = function($config) {
+            Validator::attestConfigMinio($config);
+            $config['version'] = "latest";
+            $aws = new S3Client($config);
+
+            return new S3FileSystem($aws, $config['bucket']);
+        };
+
         $app['fileSystem'] = function() {
             return new FileSystem('/');
         };
