@@ -5,7 +5,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/chella/aws-services/v/unstable)](https://packagist.org/packages/chella/aws-services)
 [![License](https://poser.pugx.org/chella/aws-services/license)](https://packagist.org/packages/chella/aws-services)
 
-application with Slim Framework
+Application with Slim Framework
 
 #### Installation
 
